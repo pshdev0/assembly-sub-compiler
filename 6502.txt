@@ -1,4 +1,4 @@
-// 6502 instruction set: mnemonic, addressing mode, hex op code, cycles, affected registers
+// 6502 instruction set: mnemonic, addressing mode, hex op code, cycles, special additive cycle condition flags
 
 adc imm 69 2
 adc zp 65 3
