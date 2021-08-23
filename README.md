@@ -1,4 +1,4 @@
-# groovy-6502
+# 65C02-asm-compiler
 A modern assembly language 65(C)02 compiler with
 
 * Modern Java/C++ syntax and scope delineation
