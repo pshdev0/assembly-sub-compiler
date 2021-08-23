@@ -1,16 +1,16 @@
-# 65(C)02-asm-compiler
-My own 65(C)02 assembly language compiler and IDE written in Java/JavaFX
+# groovy-65(C)02
+Binaries for my 65(C)02 assembly language compiler and IDE
 
 Currently supports:
 
-* Groovy support (write inline Java / Groovy code to generate data on the spot)
 * Java / C++ inspired assembly language syntax and comments
-* Branching and function scope delineation
+* Simplified branching, and scope delineation
+* Groovy support (write inline Java / Groovy code to generate data on the spot & inject as machine code)
 * Inline Huffman compression / decompression
 * Vera graphics support (Commander X16)
 * Sprite, Tile & Map editing
 
-Todo:
+TODO:
 
 * Test & upload existing IDE & assembler
 
@@ -18,8 +18,9 @@ In the works:
 
 * Full list of command support docs
 * Additional language syntax and functions
-* Groovy sub-compiler support (create assembly code inside your Groovy code and compile it)
+* Groovy sub-compiler support (construct assembly code inside your Groovy code, compile it, and inject into your machine code)
 * Self-modifying code safe guards
+* Inline function support
 
 This project is a 65(C)02 compiler at heart, with syntax additions inspired by Java and C++, and with advanced library functions. I wanted to create a language which could be used for pure 65(C)02 programming, but also provides a modern language style and advanced sub-compiled functions should you want to use them. The IDE makes organising your assembly code and integrating graphics and data a breeze using the editing tools and automatic inline decompression.
 
@@ -91,10 +92,10 @@ This project is a 65(C)02 compiler at heart, with syntax additions inspired by J
 
 # Support Appreciated
 
-Bitcoin address (BTC): `1PifMfpb1T9R3W9rU7VG2Tb13hbVsHkx59`
+Bitcoin (BTC): `1PifMfpb1T9R3W9rU7VG2Tb13hbVsHkx59`
 
-Ethereum address (ETH): `0x8CC167E266228716F8D1343d9d94158b062B14D8`
+Ethereum (ETH): `0x8CC167E266228716F8D1343d9d94158b062B14D8`
 
-[MetaHash](https://www.metahash.org) address (MHC): `0x008e5761eb66615477149296418d052022596c16b1df3a335d`
+[MetaHash](https://www.metahash.org) (MHC): `0x008e5761eb66615477149296418d052022596c16b1df3a335d`
 
-Ripple address (XRP Network): `rEb8TK3gBgk5auZkwc6sHnwrGVJH8DuaLh` memo: `100907859`
+Ripple (XRP Network): `rEb8TK3gBgk5auZkwc6sHnwrGVJH8DuaLh` memo: `100907859`
