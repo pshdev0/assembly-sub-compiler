@@ -1,13 +1,14 @@
 # 65(C)02-asm-compiler
-My own 65(C)02 assembly language compiler with Java/JavaFX IDE
+My own 65(C)02 assembly language compiler and IDE written in Java/JavaFX
 
 Currently supports:
 
-* Modern Java/C++ syntax and scope delineation
-* Groovy support
+* Groovy support (write inline Java / Groovy code to generate data on the spot)
+* Java / C++ inspired assembly language syntax and comments
+* Branching and function scope delineation
+* Inline Huffman compression / decompression
 * Vera graphics support (Commander X16)
 * Sprite, Tile & Map editing
-* Inline Huffman compression / decompression
 
 Todo:
 
@@ -15,12 +16,12 @@ Todo:
 
 In the works:
 
-* Self-modifying code safe guards
-* Groovy sub-compiler support
+* Full list of command support docs
 * Additional language syntax and functions
-* Full list of command support docs to follow
+* Groovy sub-compiler support (create assembly code inside your Groovy code and compile it)
+* Self-modifying code safe guards
 
-This project is a 65(C)02 compiler at heart, with syntax additions inspired by Java and C++, and with advanced library functions. I wanted to create a language which could be used for pure 65(C)02 programming, but also providing a modern language style and advanced sub-compiled functions should you want to use them.
+This project is a 65(C)02 compiler at heart, with syntax additions inspired by Java and C++, and with advanced library functions. I wanted to create a language which could be used for pure 65(C)02 programming, but also provides a modern language style and advanced sub-compiled functions should you want to use them. The IDE makes organising you assembly and integrating graphics and data a breeze using the editing tools and automatic inline decompression.
 
 # Example
 
