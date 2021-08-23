@@ -21,7 +21,7 @@ In the works:
 * Groovy sub-compiler support (create assembly code inside your Groovy code and compile it)
 * Self-modifying code safe guards
 
-This project is a 65(C)02 compiler at heart, with syntax additions inspired by Java and C++, and with advanced library functions. I wanted to create a language which could be used for pure 65(C)02 programming, but also provides a modern language style and advanced sub-compiled functions should you want to use them. The IDE makes organising you assembly and integrating graphics and data a breeze using the editing tools and automatic inline decompression.
+This project is a 65(C)02 compiler at heart, with syntax additions inspired by Java and C++, and with advanced library functions. I wanted to create a language which could be used for pure 65(C)02 programming, but also provides a modern language style and advanced sub-compiled functions should you want to use them. The IDE makes organising your assembly code and integrating graphics and data a breeze using the editing tools and automatic inline decompression.
 
 # Example
 
