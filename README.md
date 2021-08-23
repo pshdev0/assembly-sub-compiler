@@ -20,7 +20,7 @@ In the works:
 * Additional language syntax and functions
 * Full list of command support docs to follow
 
-This project is a 65(C)02 compiler at heart, with syntax additions inspired by Java and C++, and with advanced library functions. I wanted to create a language which could be used for pure 65(C)02 programming, but also providing a modern language style and advanced functions should you want to use them.
+This project is a 65(C)02 compiler at heart, with syntax additions inspired by Java and C++, and with advanced library functions. I wanted to create a language which could be used for pure 65(C)02 programming, but also providing a modern language style and advanced sub-compiled functions should you want to use them.
 
 # Example
 
