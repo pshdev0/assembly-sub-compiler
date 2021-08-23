@@ -88,7 +88,7 @@ This project is a 65(C)02 compiler at heart, with syntax additions inspired by J
 }
 ```
 
-# Support
+# Support Appreciated
 
 Bitcoin address (BTC): `1PifMfpb1T9R3W9rU7VG2Tb13hbVsHkx59`
 
