@@ -96,4 +96,4 @@ Ethereum address (ETH): `0x8CC167E266228716F8D1343d9d94158b062B14D8`
 
 [MetaHash](https://www.metahash.org) address (MHC): `0x008e5761eb66615477149296418d052022596c16b1df3a335d`
 
-Ripple address (XRP Network): `rEb8TK3gBgk5auZkwc6sHnwrGVJH8DuaLh` (memo: `100907859`)
+Ripple address (XRP Network): `rEb8TK3gBgk5auZkwc6sHnwrGVJH8DuaLh` memo: `100907859`
