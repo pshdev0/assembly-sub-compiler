@@ -1,4 +1,4 @@
-# 65C02-asm-compiler
+# 65(C)02-asm-compiler
 My own 65(C)02 language compiler with
 
 * Modern Java/C++ syntax and scope delineation
