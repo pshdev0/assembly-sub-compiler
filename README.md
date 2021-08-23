@@ -6,8 +6,9 @@ My own 65(C)02 language compiler with
 * Self-modifying code safe guards
 * Vera graphics support (Commander X16)
 * Automatic Huffman compression / decompression
+* TODO - finish off and upload
 
-TODO - upload !
+This project is a 65(C)02 compiler at heart, but with modern Java/C++ style syntax additions and advanced functions.
 
 # Simple example
 
