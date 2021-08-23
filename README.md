@@ -1,14 +1,26 @@
 # 65(C)02-asm-compiler
-My own 65(C)02 assembly language compiler with
+My own 65(C)02 assembly language compiler with Java/JavaFX IDE
+
+Currently supports:
 
 * Modern Java/C++ syntax and scope delineation
-* Groovy support with sub-compiler support
-* Self-modifying code safe guards
+* Groovy support
 * Vera graphics support (Commander X16)
-* Automatic Huffman compression / decompression
-* TODO - finish off and upload
+* Sprite, Tile & Map editing
+* Inline Huffman compression / decompression
 
-This project is a 65(C)02 compiler at heart, with syntax additions inspired by Java and C++, and with advanced library functions.
+Todo:
+
+* Test & upload existing IDE & assembler
+
+In the works:
+
+* Self-modifying code safe guards
+* Groovy sub-compiler support
+* Additional language syntax and functions
+* Full list of command support docs to follow
+
+This project is a 65(C)02 compiler at heart, with syntax additions inspired by Java and C++, and with advanced library functions. I wanted to create a language which could be used for pure 65(C)02 programming, but also providing a modern language style and advanced functions should you want to use them.
 
 # Simple example
 
@@ -78,4 +90,11 @@ This project is a 65(C)02 compiler at heart, with syntax additions inspired by J
 }
 ```
 
+# Support
 
+If you like this project, please consider supporting it here:
+
+Bitcoin address (BTC): 1PifMfpb1T9R3W9rU7VG2Tb13hbVsHkx59
+Ethereum address (ETH): 0x8CC167E266228716F8D1343d9d94158b062B14D8
+MetaHash address (MHC): 0x008e5761eb66615477149296418d052022596c16b1df3a335d
+Ripple address (XRP Network): rEb8TK3gBgk5auZkwc6sHnwrGVJH8DuaLh (memo: 100907859)
