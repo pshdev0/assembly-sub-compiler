@@ -1,5 +1,5 @@
 # 65(C)02-asm-compiler
-My own 65(C)02 language compiler with
+My own 65(C)02 assembly language compiler with
 
 * Modern Java/C++ syntax and scope delineation
 * Groovy support with sub-compiler support
