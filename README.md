@@ -8,7 +8,7 @@ My own 65(C)02 assembly language compiler with
 * Automatic Huffman compression / decompression
 * TODO - finish off and upload
 
-This project is a 65(C)02 compiler at heart, but with modern Java/C++ style syntax additions and advanced functions.
+This project is a 65(C)02 compiler at heart, with syntax additions inspired by Java and C++, and with advanced library functions.
 
 # Simple example
 
