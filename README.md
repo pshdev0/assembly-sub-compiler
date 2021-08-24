@@ -22,7 +22,7 @@ In the works:
 * Self-modifying code safe guards
 * Inline function support
 
-This project is a 65(C)02 compiler at heart, with syntax additions inspired by Java and C++, and with advanced library functions. I wanted to create a language which could be used for pure 65(C)02 programming, but also provides a modern language style and advanced sub-compiled functions should you want to use them. The IDE makes organising your assembly code and integrating graphics and data a breeze using the editing tools and automatic inline decompression.
+This project is a 65(C)02 compiler at heart, with Java and C++ inspired syntax additions, and various helper functions.
 
 # Example
 
@@ -39,20 +39,20 @@ This project is a 65(C)02 compiler at heart, with syntax additions inspired by J
 .vera_video_mode(RES_320X240, 40, 40, 0)
 .vera_sprites_on()
 
-.vera_upload_init(1, 1, $fc00, 0) // bank 1, auto increment 1, address, use data0 (injects decompressor and data directly into code)
-.vera_decompress_upload(sprData, 0)
+.vera_upload_init(1, 1, $fc00, 0) // bank 1, auto increment 1, address, use data0
+.vera_decompress_upload(sprData, 0) // decompress "sprData" and upload directly to vera
 
-.vera_upload_init(0, 1, $4000, 0) // bank 0, auto increment 1, address, use data0 (injects decompressor and data directly into code)
-.vera_decompress_upload(spr, 0)
+.vera_upload_init(0, 1, $4000, 0) // bank 0, auto increment 1, address, use data0
+.vera_decompress_upload(spr, 0) // decompress "spr" and upload directly to vera
 
-.vera_upload_init(0, 1, $A000, 0) // upload tiles (injects decompressor and data directly into code)
-.vera_decompress_upload(tiles1, 0)
+.vera_upload_init(0, 1, $A000, 0)
+.vera_decompress_upload(tiles1, 0) // decompress "tiles1" and upload directly to vera
 
-.vera_upload_init(0, 2, $5000, 0) // upload map (injects decompressor and data directly into code)
-.vera_decompress_upload(map1, 0)
+.vera_upload_init(0, 2, $5000, 0)
+.vera_decompress_upload(map1, 0) // decompress "map1" and upload directly to vera
 
 .vera_upload_init(0, 2, $5001, 0) // zero out the alternate bytes
-.vera_decompress_upload(zero1, 0)
+.vera_decompress_upload(zero1, 0) // decompress "zero1" and upload directly to vera
 
 .vera_level_init(1, 64, 8, 40, 16, 20)	// initialise the level
 
