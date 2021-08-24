@@ -18,7 +18,7 @@ In the works:
 
 * Full list of command support docs
 * Additional language syntax and functions
-* Groovy sub-compiler support (construct assembly code inside your Groovy code, compile it, and inject into your machine code)
+* Groovy sub-compiler support (construct assembly code inside your Groovy code, compile it, and inject directly into the machine code binary)
 * Self-modifying code safe guards
 * Inline function support
 
