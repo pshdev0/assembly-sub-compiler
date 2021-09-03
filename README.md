@@ -2,9 +2,9 @@
 
 This project is a 65(C)02 compiler at heart, with Java and C++ inspired syntax additions and various helper functions. Accompanied by an IDE for easy data file editing, e.g. sprites, tiles, data, etc.
 
-The compilers basic principles are:
+The compiler's basic principles:
 
-* Each scope `{ }` invokes a new sub-compiler with known (or null if appropriate) symbol history.
+* Each scope `{ }` invokes a new sub-compiler with known (or `null` if appropriate) symbol history.
 * A handlful of flexible regexes identify `functions()`, `function(x, y, ...)`, command `{ ... }` blocks, and `labels:`.
 * Any unknown symbols are recorded in real-time and post-filled as soon as they become defined.
 * Groovy is used to evaluate symbols which allows for inline arithmetic operations and simple inline function evaluation.
