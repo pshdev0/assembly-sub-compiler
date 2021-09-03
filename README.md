@@ -19,6 +19,7 @@ Current features:
 * Inline Huffman compression / decompression
 * VERA graphics support (Commander X16)
 * Sprite, Tile & Map editing
+* Command sets and functions based on Plugins
 
 Getting started:
 ---
@@ -145,6 +146,8 @@ Once compiled a typical project structure might be:
 * Groovy sub-compiler support (construct assembly code inside your Groovy code inside your `.asm` files, compile it inside Groovy, and have it inject directly into the `.asm` machine code binary)
 * Self-modifying code safe guards
 * Inline function support
+* Alow users to create their own Plugins
+* Abstract addressing modes so it can handle any CPU given the necessary Plugin !
 
 # Support Appreciated
 
