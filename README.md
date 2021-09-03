@@ -11,6 +11,8 @@ The compiler's basic principles:
 
 It's not been tested properly but I will be performing that in due course. Please report any bugs if you find any.
 
+Eventually I hope to abstract addressing modes so that, given the necessary Plugin, it can compile for any CPU.
+
 Current features:
 ---
 * Java / C++ inspired assembly language syntax and comments
