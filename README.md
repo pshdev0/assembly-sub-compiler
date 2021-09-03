@@ -1,6 +1,6 @@
 # Assembly Sub-Compiler 65(C)02
 
-This project is a 65(C)02 compiler at heart, with Java and C++ inspired syntax additions, and various helper functions.
+This project is a 65(C)02 compiler at heart, with Java and C++ inspired syntax additions, and various helper functions. Accompanied by an IDE for easy data file editing, e.g. sprites, tiles, data, etc.
 
 I haven'y extensively tested it, but will do in due course. Please report any bugs if you find any.
 
