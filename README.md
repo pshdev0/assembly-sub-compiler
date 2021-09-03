@@ -19,7 +19,7 @@ Current features:
 * Inline Huffman compression / decompression
 * VERA graphics support (Commander X16)
 * Sprite, Tile & Map editing
-* Plugin based, currently `6502`, `65C02`, `StandardLibrary`, and `VeraLibrary` (more to come and user-defined Custom Plugin support !)
+* Plugin based, currently `6502`, `65C02`, `StandardLibrary`, and `VeraLibrary` (with more to come and even user-defined Custom Plugin support :-)
 
 Getting started:
 ---
