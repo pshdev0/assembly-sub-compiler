@@ -1,10 +1,17 @@
 # Assembly Sub-Compiler 65(C)02
 
-This project is a 65(C)02 compiler at heart, with Java and C++ inspired syntax additions, and various helper functions. Accompanied by an IDE for easy data file editing, e.g. sprites, tiles, data, etc.
+This project is a 65(C)02 compiler at heart, with Java and C++ inspired syntax additions and various helper functions. Accompanied by an IDE for easy data file editing, e.g. sprites, tiles, data, etc.
 
-I haven'y extensively tested it, but will do in due course. Please report any bugs if you find any.
+The compilers basic principles are:
 
-Currently supports:
+* Each scope `{ }` invokes a new sub-compiler with known (or null if appropriate) symbol history.
+* A handlful of flexible regexes identify `functions()`, `function(x, y, ...)`, command `{ ... }` blocks, and `labels:`.
+* Any unknown symbols are recorded in real-time and post-filled as soon as they become defined.
+* Groovy is used to evaluate symbols which allows for inline arithmetic operations and simple inline function evaluation.
+
+It's not been tested properly but I will be performing that in due course. Please report any bugs if you find any.
+
+Current features:
 ---
 * Java / C++ inspired assembly language syntax and comments
 * Simplified branching, and scope delineation
