@@ -66,7 +66,7 @@ Once compiled a typical project structure might be:
 
 * The `images` folder contains raw data file "images" referenced by e.g. `spritedata.res`, `tiledata.res` and `map.res` which are used to generate `spritedata.bin`, `tiledata.bin` and `map.bin` respectively.
 * All raw data including sprites, tiles, maps, and any other data are considered to be "images", and are effectively just an array of 8-bit integers, e.g. sprites and tile image data would be consecutive RGB triples, whereas map data might just be consecutive rows containing integer tile references.
-* Raw image files can be added manually to `images/` or you can use the IDE to open your project `ROOT/` folder and manage data files that way. You define your data in the `.res` files, e.g. you can create your data in the IDE or on the command line and if you open up your ROOT folder in the IDE it will recognised your `images/` files so long as you've specified them in resource `.res` files in `src/`.
+* Raw image files can be added manually to `images/` or you can use the IDE to open your project `ROOT/` folder and manage data files that way. You define your data in the `.res` files, e.g. you can create your data in the IDE or on the command line and if you open up your ROOT folder in the IDE it will recognise your `images/` files so long as you've specified them in resource `.res` files in `src/`.
 * You can compile manually on the command line or use the IDE; the compiler and IDE were written to be as flexible as possible and in fact the IDE invokes the command line compiler anyway.
 
 # Example
