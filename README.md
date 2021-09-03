@@ -1,8 +1,11 @@
-# groovy-65(C)02
-Binaries for my 65(C)02 assembly language compiler and IDE
+# Assembly Sub-Compiler 65(C)02
+
+This project is a 65(C)02 compiler at heart, with Java and C++ inspired syntax additions, and various helper functions.
+
+I haven'y extensively tested it, but will do in due course. Please report any bugs if you find any.
 
 Currently supports:
-
+---
 * Java / C++ inspired assembly language syntax and comments
 * Simplified branching, and scope delineation
 * Groovy support (write inline Java / Groovy code to generate data on the spot & inject as machine code)
@@ -10,25 +13,55 @@ Currently supports:
 * Vera graphics support (Commander X16)
 * Sprite, Tile & Map editing
 
-TODO:
+Getting started:
+---
 
-* Test & upload existing IDE & assembler
+* Create a new `ROOT` folder to store your assembly project files.
+* Assembly code you intend to compile into executable `.prg` files should be written in `.asm` files, e.g. `ROOT/spritedemo.asm` will be compiled, and generate output in `ROOT/prg/spritedemo.prg` with a two-byte header `$10 $08` added to the beginning of the binary. You can load and run this directly in your emulator or physical device.
+* Resource binaries you intend to use for data should be written in `.res` files, e.g. `ROOT/tiledata.res` will be compiled just like `.asm` files, but it will be generated in `ROOT/bin/tiledata.bin` without the `$10 $08` two-byte header.
+* You can reference `.res` resource files (no extension required) inside your `.asm` files, e.g. insert an automatic Huffman decompressor for `tiledata.bin` into your assembly code, or insert automatic Vera decompression upload code. Very handy !
+* Before compiling your `.asm` files make sure to compile all your `.res` files, otherwise the compiler won't have generated the `bin/` binaries from the `.res` files which you may have referenced in your `.asm` files.
+* You can mix `.image` and assembly code as you wish in your `.res` files because they are effectively just `.asm` files with a special purpose.
 
-In the works:
+Once compiled a typical project structure might be:
 
-* Full list of command support docs
-* Additional language syntax and functions
-* Groovy sub-compiler support (construct assembly code inside your Groovy code, compile it, and inject directly into the machine code binary)
-* Self-modifying code safe guards
-* Inline function support
+```
+	ROOT/
+		spritedemo.asm			// e.g. see example code below
 
-This project is a 65(C)02 compiler at heart, with Java and C++ inspired syntax additions, and various helper functions.
+		spritedata.res			// e.g. ".image(sprite1, 32)
+							 .image(sprite2, 32)
+							 .image(sprite3, 32)"
+							 
+		tiledata.res			// e.g. ".image(tile1, 16)
+							 .image(tile2, 16)"
+		
+		map.res				// e.g. ".image(map, 256)"
+		
+		bin/
+			spritedata.bin		// generated on compiling spritedata.res
+			tiledata.bin		// generated on compiling tiledata.res
+		
+		prg/
+			spritedemo.prg		// generated on compiling spritedemo.asm
+		
+		images/
+			sprite1			// raw RGB data 32x32 pixels
+			sprite2
+			sprite3
+			tile1			// raw RGB data 16x16 pixels
+			tile2
+			map			// raw map data
+```
+
+* The `images` folder contains raw data file "images" referenced by e.g. `spritedata.res`, `tiledata.res` and `map.res` which are used to generate `spritedata.bin` and `tiledata.bin` respectively.
+* Sprites, Tiles, maps, and any other data are considered to be "images".
+* Raw image files can be added manually to `images/` or you can use the IDE to open your project `ROOT/` folder and manage data files that way.
+* You can compile manually on the command line or use the IDE; the compiler and IDE were written to be as flexible as possible.
 
 # Example
 
 ```
-.export(X16TEST)
-
 .org($0800)
 .prgBasicEntry()
 
@@ -89,6 +122,19 @@ This project is a 65(C)02 compiler at heart, with Java and C++ inspired syntax a
 	.sleep(20, 20)
 }
 ```
+
+# TODO
+
+* Finalise `.asm` IDE editing
+* Test & upload existing IDE & compiler
+
+# In the works
+
+* Full list of command support docs
+* Additional language syntax and functions
+* Groovy sub-compiler support (construct assembly code inside your Groovy code inside your `.asm` files, compile it inside Groovy, and have it inject directly into the `.asm` machine code binary)
+* Self-modifying code safe guards
+* Inline function support
 
 # Support Appreciated
 
