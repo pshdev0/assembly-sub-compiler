@@ -17,30 +17,33 @@ Getting started:
 ---
 
 * Create a new `ROOT` folder to store your assembly project files.
-* Assembly code you intend to compile into executable `.prg` files should be written in `.asm` files, e.g. `ROOT/spritedemo.asm` will be compiled, and generate output in `ROOT/prg/spritedemo.prg` with a two-byte header `$10 $08` added to the beginning of the binary. You can load and run this directly in your emulator or physical device.
-* Resource binaries you intend to use for data should be written in `.res` files, e.g. `ROOT/tiledata.res` will be compiled just like `.asm` files, but it will be generated in `ROOT/bin/tiledata.bin` without the `$10 $08` two-byte header.
-* You can reference `.res` resource files (no extension required) inside your `.asm` files, e.g. insert an automatic Huffman decompressor for `tiledata.bin` into your assembly code, or insert automatic Vera decompression upload code. Very handy !
+* Assembly `.asm` and resource `.res` files should be stored in `ROOT/src/` folder. 
+* Assembly code you intend to compile into executable `.prg` files should have `.asm` extension, e.g. `ROOT/src/spritedemo.asm` will be compiled and generate `ROOT/prg/spritedemo.prg` with a two-byte header `$10 $08` added to the beginning of the binary. You can load and run this directly in your emulator or physical device.
+* Resource binaries you intend to use for data should have `.res` extension, e.g. `ROOT/src/tiledata.res` will be compiled just like `.asm` files, but it will be generated in `ROOT/bin/tiledata.bin` without the `$10 $08` two-byte header.
+* You can reference `.res` resource files (no extension required) inside your `.asm` files, e.g. to insert an automatic Huffman decompressor for `tiledata.bin` into your assembly code, or insert automatic Vera decompression upload code. Very handy !
 * Before compiling your `.asm` files make sure to compile all your `.res` files, otherwise the compiler won't have generated the `bin/` binaries from the `.res` files which you may have referenced in your `.asm` files.
-* You can mix `.image` and assembly code as you wish in your `.res` files because they are effectively just `.asm` files with a special purpose.
+* Resrouce `.res` files are just `.asm` files with a special purpose so you can mix data and code in there if you like depending on your needs !
 
 Once compiled a typical project structure might be:
 
 ```
 	ROOT/
-		spritedemo.asm			// e.g. see example code below
+		src/
+			spritedemo.asm		// e.g. see example code below
 
-		spritedata.res			// e.g. ".image(sprite1, 32)
+			spritedata.res		// e.g. ".image(sprite1, 32)
 							 .image(sprite2, 32)
 							 .image(sprite3, 32)"
 							 
-		tiledata.res			// e.g. ".image(tile1, 16)
+			tiledata.res		// e.g. ".image(tile1, 16)
 							 .image(tile2, 16)"
 		
-		map.res				// e.g. ".image(map, 256)"
+			map.res			// e.g. ".image(map, 256)"
 		
 		bin/
 			spritedata.bin		// generated on compiling spritedata.res
 			tiledata.bin		// generated on compiling tiledata.res
+			map.bin			// generated on compiling map.res
 		
 		prg/
 			spritedemo.prg		// generated on compiling spritedemo.asm
@@ -54,9 +57,9 @@ Once compiled a typical project structure might be:
 			map			// raw map data
 ```
 
-* The `images` folder contains raw data file "images" referenced by e.g. `spritedata.res`, `tiledata.res` and `map.res` which are used to generate `spritedata.bin` and `tiledata.bin` respectively.
-* Sprites, Tiles, maps, and any other data are considered to be "images".
-* Raw image files can be added manually to `images/` or you can use the IDE to open your project `ROOT/` folder and manage data files that way.
+* The `images` folder contains raw data file "images" referenced by e.g. `spritedata.res`, `tiledata.res` and `map.res` which are used to generate `spritedata.bin`, `tiledata.bin` and `map.bin` respectively.
+* All raw data including sprites, tiles, maps, and any other data are considered to be "images", and are effectively just an array of 8-bit integers, e.g. sprites and tile image data would be consecutive RGB triples, whereas map data might just be consecutive rows containing integer tile references.
+* Raw image files can be added manually to `images/` or you can use the IDE to open your project `ROOT/` folder and manage data files that way. You define your data in the `.res` files.
 * You can compile manually on the command line or use the IDE; the compiler and IDE were written to be as flexible as possible.
 
 # Example
