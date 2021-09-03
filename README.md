@@ -10,7 +10,7 @@ Currently supports:
 * Simplified branching, and scope delineation
 * Groovy support (write inline Java / Groovy code to generate data on the spot & inject as machine code)
 * Inline Huffman compression / decompression
-* Vera graphics support (Commander X16)
+* VERA graphics support (Commander X16)
 * Sprite, Tile & Map editing
 
 Getting started:
