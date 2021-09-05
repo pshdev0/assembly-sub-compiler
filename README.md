@@ -4,7 +4,7 @@ This project is a 65(C)02 compiler at heart, with Java and C++ inspired syntax a
 
 The compiler's basic principles:
 
-* A handlful of flexible regexes identify `functions()`, `function(x, y, ...)`, command `{ ... }` blocks, and `labels:`.
+* A handlful of flexible regexes identify `function()`, `function(x, y, ...)`, command `{ ... }` blocks, and `labels:`.
 * Each scope `{ }` invokes a new sub-compiler with known (or `null` if appropriate) symbol history.
 * Any unknown symbols are recorded in real-time and post-filled as soon as they are defined.
 * Groovy is used to evaluate symbols which allows for inline arithmetic operations and simple inline function evaluation.
