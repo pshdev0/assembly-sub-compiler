@@ -32,7 +32,9 @@ Once compiled a typical project structure might be:
 
 ```
 	ROOT/
+	
 		src/
+		
 			spritedemo.asm		// e.g. see example code below
 
 			spritedata.asm		// e.g. ".export(BIN)
@@ -48,14 +50,17 @@ Once compiled a typical project structure might be:
 							 .image(map, 256)"
 		
 		bin/
+		
 			spritedata.bin		// generated on compiling spritedata.asm
 			tiledata.bin		// generated on compiling tiledata.asm
 			map.bin			// generated on compiling map.asm
 		
 		prg/
+		
 			spritedemo.prg		// generated on compiling spritedemo.asm
 		
 		images/
+		
 			sprite1			// raw RGB data 32x32 pixels
 			sprite2
 			sprite3
