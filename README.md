@@ -138,7 +138,6 @@ Once compiled a typical project structure might be:
 
 # TODO
 
-* Finalise `.asm` IDE editing
 * Test & upload existing IDE & compiler
 
 # In the works
