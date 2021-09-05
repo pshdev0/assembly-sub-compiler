@@ -68,7 +68,7 @@ Once compiled a typical project structure might be:
 			map			// raw map data
 ```
 
-* The `images` folder contains raw data file "images" listed in e.g. `spritedata.asm`, `tiledata.asm` and `map.reasms` which are used to generate `spritedata.bin`, `tiledata.bin` and `map.bin` respectively.
+* The `images` folder contains raw data file "images" listed in e.g. `spritedata.asm`, `tiledata.asm` and `map.asm` which are used to generate `spritedata.bin`, `tiledata.bin` and `map.bin` respectively.
 * All raw data including sprites, tiles, maps, and any other data are considered to be "images", and are effectively just an array of 8-bit integers, e.g. sprites and tile image data would be consecutive RGB triples, whereas map data might just be consecutive rows containing integer tile references.
 * The project works via the native OS file system so you can choose to create your projects manually and edit your code using e.g. Microsoft Code or whatever, or you can use the provided IDE. Likewise for your graphics - you can build your `graphics.asm` file lists and edit your graphics in the IDE, or you can just add your graphics files to the `ROOT/bin/` folder manually. The choice is yours !
 
