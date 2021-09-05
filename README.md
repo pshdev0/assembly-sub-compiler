@@ -28,7 +28,7 @@ Getting started:
 
 * Create a new `ROOT` folder to store your assembly project files.
 * Source assembly `.asm` files should be stored in `ROOT/src/`.
-* Use `.export(BIN)` to compile `.asm` files to `.bin` files stored in `ROOT/bin/`; if you don't include this the compiler will compile to a `.prg` and store it in `ROOT/prg/` folder, preprending the two header bytes `$10 $08`. You can change the header by using `.export(PRG, $1234)`.
+* Use `.export(BIN)` to compile `.asm` files to `.bin` files stored in `ROOT/bin/`; if you don't include this the compiler will compile to a `.prg` and store it in `ROOT/prg/` folder, preprending the two header bytes `$01 $08`. You can change the header by using `.export(PRG, $1234)`.
 * You can reference any `.asm` file (no extension required) inside other `.asm` files, e.g. to insert an automatic Huffman decompressor for `tiledata.bin` into your assembly code, or insert automatic Vera decompression upload code.
 * Before compiling your `.asm` files make sure to compile any dependency `.asm` files that will be exported as `.bin` files, otherwise the compiler won't have generated the `bin/` binaries you may have referenced in your `.asm` files.
 
