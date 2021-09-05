@@ -1,6 +1,6 @@
 # Assembly Sub-Compiler 65(C)02
 
-This project is a 65(C)02 compiler at heart, with Java and C++ inspired syntax additions and various helper functions. Accompanied by an IDE for easy data file editing, e.g. sprites, tiles, data, etc.
+This project is a 65(C)02 compiler at heart, with Java and C++ inspired syntax additions and various helper functions. Accompanied by an IDE for easy editing of sprites, tiles, and general data.
 
 The compiler's basic principles:
 
@@ -20,19 +20,17 @@ Current features:
 * Groovy support (write inline Java / Groovy code to generate data on the spot & inject as machine code)
 * Inline Huffman compression / decompression
 * VERA graphics support (Commander X16)
+* Current plugins include `6502`, `65C02`, `StandardLibrary`, and `VeraLibrary`
 * Sprite, Tile & Map editing
-* Plugin based, currently `6502`, `65C02`, `StandardLibrary`, and `VeraLibrary` (with more to come and even user-defined Custom Plugin support :-)
 
 Getting started:
 ---
 
 * Create a new `ROOT` folder to store your assembly project files.
-* Assembly `.asm` and resource `.res` files should be stored in `ROOT/src/` folder. 
-* Assembly code you intend to compile into executable `.prg` files should have `.asm` extension, e.g. `ROOT/src/spritedemo.asm` will be compiled and generate `ROOT/prg/spritedemo.prg` with a two-byte header `$10 $08` added to the beginning of the binary. You can load and run this directly in your emulator or physical device.
-* Resource binaries you intend to use for data should have `.res` extension, e.g. `ROOT/src/tiledata.res` will be compiled just like `.asm` files, but it will be generated in `ROOT/bin/tiledata.bin` without the `$10 $08` two-byte header.
-* You can reference `.res` resource files (no extension required) inside your `.asm` files, e.g. to insert an automatic Huffman decompressor for `tiledata.bin` into your assembly code, or insert automatic Vera decompression upload code. Very handy !
-* Before compiling your `.asm` files make sure to compile all your `.res` files, otherwise the compiler won't have generated the `bin/` binaries from the `.res` files which you may have referenced in your `.asm` files.
-* Resrouce `.res` files are just `.asm` files with a special purpose so you can mix data and code in there if you like depending on your needs !
+* Source assembly `.asm` files should be stored in `ROOT/src/`.
+* Use `.export(BIN)` to compile `.asm` files to `.bin` files stored in `ROOT/bin/`; if you don't include this the compiler will compile to a `.prg` and store it in `ROOT/prg/` folder, preprending the two header bytes `$10 $08`. You can change the header by using `.export(PRG, $1234)`.
+* You can reference any `.asm` file (no extension required) inside other `.asm` files, e.g. to insert an automatic Huffman decompressor for `tiledata.bin` into your assembly code, or insert automatic Vera decompression upload code.
+* Before compiling your `.asm` files make sure to compile any dependency `.asm` files that will be exported as `.bin` files, otherwise the compiler won't have generated the `bin/` binaries you may have referenced in your `.asm` files.
 
 Once compiled a typical project structure might be:
 
@@ -41,14 +39,17 @@ Once compiled a typical project structure might be:
 		src/
 			spritedemo.asm		// e.g. see example code below
 
-			spritedata.res		// e.g. ".image(sprite1, 32)
+			spritedata.asm		// e.g. ".export(BIN)
+							 .image(sprite1, 32)
 							 .image(sprite2, 32)
 							 .image(sprite3, 32)"
 							 
-			tiledata.res		// e.g. ".image(tile1, 16)
+			tiledata.asm		// e.g. ".export(BIN)
+							 .image(tile1, 16)
 							 .image(tile2, 16)"
 		
-			map.res			// e.g. ".image(map, 256)"
+			map.asm			// e.g. ".export(BIN)
+							 .image(map, 256)"
 		
 		bin/
 			spritedata.bin		// generated on compiling spritedata.res
@@ -67,10 +68,9 @@ Once compiled a typical project structure might be:
 			map			// raw map data
 ```
 
-* The `images` folder contains raw data file "images" referenced by e.g. `spritedata.res`, `tiledata.res` and `map.res` which are used to generate `spritedata.bin`, `tiledata.bin` and `map.bin` respectively.
+* The `images` folder contains raw data file "images" referenced by e.g. `spritedata.asm`, `tiledata.asm` and `map.reasms` which are used to generate `spritedata.bin`, `tiledata.bin` and `map.bin` respectively.
 * All raw data including sprites, tiles, maps, and any other data are considered to be "images", and are effectively just an array of 8-bit integers, e.g. sprites and tile image data would be consecutive RGB triples, whereas map data might just be consecutive rows containing integer tile references.
-* Raw image files can be added manually to `images/` or you can use the IDE to open your project `ROOT/` folder and manage data files that way. You define your data in the `.res` files, e.g. you can create your data in the IDE or on the command line and if you open up your ROOT folder in the IDE it will recognise your `images/` files so long as you've specified them in resource `.res` files in `src/`.
-* You can compile manually on the command line or use the IDE; the compiler and IDE were written to be as flexible as possible and in fact the IDE invokes the command line compiler anyway.
+* The project works via the native OS file system so you can choose to create your projects manually and edit your code using e.g. Microsoft Code or whatever, or you can use the provided IDE. Likewise for your graphics - you can build your `graphics.asm` file lists and edit your graphics in the IDE, or you can just add your graphics files to the `ROOT/bin/` folder manually. The choice is yours !
 
 # Example
 
