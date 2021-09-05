@@ -6,7 +6,7 @@ The compiler's basic principles:
 
 * A handlful of flexible regexes identify `function()`, `function(x, y, ...)`, command `{ ... }` blocks, and `labels:`.
 * Each scope `{ }` invokes a new sub-compiler with known (or `null` if appropriate) symbol history.
-* Any unknown symbols are recorded in real-time and post-filled as soon as they are defined.
+* Any unknown symbols are tracked in real-time and post-filled as soon as they are defined.
 * Groovy is used to evaluate symbols which allows for inline arithmetic operations and simple inline function evaluation.
 
 It's not been tested properly but I will be performing that in due course. Please report any bugs if you find any.
