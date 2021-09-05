@@ -52,9 +52,9 @@ Once compiled a typical project structure might be:
 							 .image(map, 256)"
 		
 		bin/
-			spritedata.bin		// generated on compiling spritedata.res
-			tiledata.bin		// generated on compiling tiledata.res
-			map.bin			// generated on compiling map.res
+			spritedata.bin		// generated on compiling spritedata.asm
+			tiledata.bin		// generated on compiling tiledata.asm
+			map.bin			// generated on compiling map.asm
 		
 		prg/
 			spritedemo.prg		// generated on compiling spritedemo.asm
