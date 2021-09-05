@@ -9,10 +9,6 @@ The compiler's basic principles:
 * Any unknown symbols are tracked in real-time and post-filled as soon as they are defined.
 * Groovy is used to evaluate symbols which allows for inline arithmetic operations and simple inline function evaluation.
 
-It's not been tested properly but I will be performing that in due course. Please report any bugs if you find any.
-
-Eventually I hope to abstract addressing modes so that, given the necessary Plugin, it can compile for any CPU.
-
 Current features:
 ---
 * Java / C++ inspired assembly language syntax and comments
