@@ -1,12 +1,12 @@
-# Assembly Sub-Compiler 65(C)02
+# Assembly Sub-Compiler
 
-This project is a 65(C)02 compiler at heart, with Java and C++ inspired syntax additions and various helper functions. Accompanied by an IDE for easy editing of sprites, tiles, and general data.
+This project begun life as a plugin-based 8-bit CPU compiler, with initial support for 6502, quickly followed by a 65(C)02 plugin. The plugin model allows to add new features quickly and easily using a simple Java interface. Later I intend to abstract the addressing modes to allow for compilation on any CPU. Current plugin support provides Java and C++ inspired syntax additions and various helper functions, accompanied by an IDE for easy data management.
 
 The compiler's basic principles:
 
-* A handlful of flexible regexes identify `function()`, `function(x, y, ...)`, command `{ ... }` blocks, and `labels:`.
 * Each scope `{ }` invokes a new sub-compiler with known (or `null` if appropriate) symbol history.
-* Any unknown symbols are tracked in real-time and post-filled as soon as they are defined.
+* A handlful of flexible regexes identify the next `function()`, `function(x, y, ...)`, command `{ ... }` blocks, `labels:`, and adressing mode styles.
+* Discovered unknown symbols are tracked in real-time and post-filled as soon as they become defined.
 * Groovy is used to evaluate symbols which allows for inline arithmetic operations and simple inline function evaluation.
 
 Current features:
@@ -17,7 +17,7 @@ Current features:
 * Inline Huffman compression / decompression
 * VERA graphics support (Commander X16)
 * Current plugins include `6502`, `65C02`, `StandardLibrary`, and `VeraLibrary`
-* Sprite, Tile & Map editing
+* Sprite, Tile & Map editing IDE
 
 Getting started:
 ---
