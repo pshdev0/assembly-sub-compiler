@@ -18,6 +18,7 @@ Current features:
 * VERA graphics support (Commander X16)
 * Current plugins include `6502`, `65C02`, `StandardLibrary`, and `VeraLibrary`
 * Sprite, Tile & Map editing IDE
+* Self-modifying code safe-guards, e.g. `sta self_modif("myselfmodifypointer", "mydata")`
 
 Getting started:
 ---
@@ -146,7 +147,6 @@ Once compiled a typical project structure might be:
 * Full list of command support docs
 * Additional language syntax and functions
 * Groovy sub-compiler support (construct assembly code inside your Groovy code inside your `.asm` files, compile it inside Groovy, and have it inject directly into the `.asm` machine code binary)
-* Self-modifying code safe guards
 * Inline function support
 * Alow users to create their own Plugins
 * Abstract addressing modes so it can handle any CPU given the necessary Plugin !
