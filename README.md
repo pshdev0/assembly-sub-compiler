@@ -12,13 +12,13 @@ The compiler's basic principles:
 Current features:
 ---
 * Java / C++ inspired assembly language syntax and comments
-* Simplified branching, and scope delineation
-* Groovy support (write inline Java / Groovy code to generate data on the spot & inject as machine code)
-* Inline Huffman compression / decompression
-* VERA graphics support (Commander X16)
+* Inline Groovy support (combine Java / Groovy with assembler)
 * Current plugins include `6502`, `65C02`, `StandardLibrary`, and `VeraLibrary`
-* Sprite, Tile & Map editing IDE
+* VERA graphics support (Commander X16)
+* Inline Huffman compression / decompression of data binaries (including VERA upload)
+* Simplified branching, and scope delineation
 * Self-modifying code safe-guards, e.g. `sta self_modify("myselfmodifypointer", "mydata")`
+* Sprite, Tile & Map editing IDE
 
 Getting started:
 ---
