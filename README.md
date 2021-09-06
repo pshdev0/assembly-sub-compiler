@@ -18,7 +18,7 @@ Current features:
 * VERA graphics support (Commander X16)
 * Current plugins include `6502`, `65C02`, `StandardLibrary`, and `VeraLibrary`
 * Sprite, Tile & Map editing IDE
-* Self-modifying code safe-guards, e.g. `sta self_modif("myselfmodifypointer", "mydata")`
+* Self-modifying code safe-guards, e.g. `sta self_modify("myselfmodifypointer", "mydata")`
 
 Getting started:
 ---
