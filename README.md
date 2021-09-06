@@ -140,7 +140,8 @@ Once compiled a typical project structure might be:
 
 # TODO
 
-* Test & upload existing IDE & compiler
+* Testing & debugging
+* Upload IDE & Compiler
 
 # In the works
 
