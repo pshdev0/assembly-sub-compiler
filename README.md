@@ -17,7 +17,7 @@ Current features:
 * VERA graphics support (Commander X16)
 * Inline Huffman compression / decompression of data binaries (including VERA upload)
 * Simplified branching, and scope delineation
-* Self-modifying code safe-guards, e.g. `sta self_modify("myselfmodifypointer", "initialisationpointer")`
+* Self-modifying code safe-guards, e.g. `sta mySelfModifyPointer:initialAddress`
 * Sprite, Tile & Map editing IDE
 
 Getting started:
