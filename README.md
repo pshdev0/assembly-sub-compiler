@@ -16,7 +16,7 @@ Current features:
 * Current plugins include `6502`, `65C02`, `StandardLibrary`, and `VeraLibrary`
 * VERA graphics support (Commander X16)
 * Inline Huffman compression / decompression of data binaries (including VERA upload)
-* Simplified branching, and scope delineation
+* Simplified branching, and scope delineation, e.g. `bne+ { // more code }`
 * Self-modifying code safe-guards, e.g. `sta mySelfModifyPointer:initialAddress`
 * Sprite, Tile & Map editing IDE
 
