@@ -149,7 +149,7 @@ Once compiled a typical project structure might be:
 
 # In the works
 
-* Aut-save before compiling; this will refresh the `.bin` files before compiling your chosen `.asm` file
+* Auto-save before compiling; this will refresh the `.bin` files before compiling your chosen `.asm` file
 * Full list of command support docs
 * Additional language syntax and functions
 * Groovy sub-compiler support (construct assembly code inside your Groovy code inside your `.asm` files, have Groovy invoke the sub-compiler and inject directly into machine code binary - funky)
