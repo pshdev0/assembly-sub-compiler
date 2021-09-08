@@ -31,7 +31,7 @@ You can create a New project in the IDE or do it manually:
 * Source assembly `.asm` files should be stored in `ROOT/src/`.
 * Use `.export(BIN)` to compile `.asm` files to `.bin` files stored in `ROOT/bin/`; if you don't include this the compiler will compile to a `.prg` and store it in `ROOT/prg/` folder, preprending the two header bytes `$01 $08`. You can change the header by using `.export(PRG, $1234)`.
 * You can reference any `.asm` file (no extension required) inside other `.asm` files, e.g. `.vera_decompress_upload(tiledata, 0)` to insert an automatic Huffman decompressor for `tiledata.bin` into your assembly code !
-* Before compiling your `.asm` files make sure to compile any dependency `.asm` files that will be exported as `.bin` files, otherwise the compiler won't have generated the `bin/` binaries you may have referenced in your `.asm` files.
+* Before compiling your `.asm` files make sure to compile any dependency `.asm` files that will be exported as `.bin` files, otherwise the compiler won't have generated the `bin/` binaries you may have referenced in your `.asm` files (this will be automated in future)
 
 Once compiled a typical project structure might be:
 
@@ -149,6 +149,7 @@ Once compiled a typical project structure might be:
 
 # In the works
 
+* Aut-save before compiling; this will refresh the `.bin` files before compiling your chosen `.asm` file
 * Full list of command support docs
 * Additional language syntax and functions
 * Groovy sub-compiler support (construct assembly code inside your Groovy code inside your `.asm` files, have Groovy invoke the sub-compiler and inject directly into machine code binary - funky)
