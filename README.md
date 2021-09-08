@@ -1,6 +1,8 @@
 # Assembly Sub-Compiler
 
-This project begun life as a plugin-based 8-bit CPU compiler, with initial support for 6502, quickly followed by a 65(C)02 plugin. The plugin model allows to add new features quickly and easily using a simple Java interface. Later I intend to abstract the addressing modes to allow for compilation on any CPU. Current plugin support provides Java and C++ inspired syntax additions and various helper functions, accompanied by an IDE for easy data management.
+This project begun life as a plugin-based 8-bit CPU compiler, with initial support for 6502, quickly followed by a 65(C)02 plugin and VERA (Commander X16) plugin support. The plugin model allows to add new features quickly and easily using a simple Java interface. Later I intend to abstract the addressing modes to allow for compilation on any CPU. Current plugin support provides Java and C++ inspired syntax additions and various helper functions, accompanied by an IDE for easy data management.
+
+THIS WORK IS PROVIDED AS-IS, THE CORE CODE IS THERE AND IT WORKS AS FAR AS I'VE TESTED IT, BUT IT REQUIRES FURTHER TESTING AS I DEVELOP IT. IF YOU FIND ANY BUGS PLEASE LET ME KNOW AND I'LL GET THEM FIXED !
 
 The compiler's basic principles:
 
@@ -22,6 +24,8 @@ Current features:
 
 Getting started:
 ---
+
+You can create a New project in the IDE or do it manually:
 
 * Create a new `ROOT` folder to store your assembly project files.
 * Source assembly `.asm` files should be stored in `ROOT/src/`.
@@ -147,10 +151,14 @@ Once compiled a typical project structure might be:
 
 * Full list of command support docs
 * Additional language syntax and functions
-* Groovy sub-compiler support (construct assembly code inside your Groovy code inside your `.asm` files, compile it inside Groovy, and have it inject directly into the `.asm` machine code binary)
-* Inline function support
-* Alow users to create their own Plugins
+* Groovy sub-compiler support (construct assembly code inside your Groovy code inside your `.asm` files, have Groovy invoke the sub-compiler and inject directly into machine code binary - funky)
+* Inline function support (macros)
+* Add user-defined plugin support
+
+# Future
+
 * Abstract addressing modes so it can handle any CPU given the necessary Plugin !
+* Rewrite the compiler in C++ and use ChaiScript instead of Groovy
 
 # Support Appreciated
 
