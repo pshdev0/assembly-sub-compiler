@@ -81,6 +81,8 @@ Once compiled a typical project structure might be:
 # Example
 
 ```
+// Commander X16 sprites-and-scrolling-tiled-background-example !
+
 .org($0800)
 .prgBasicEntry()
 
@@ -145,7 +147,7 @@ Once compiled a typical project structure might be:
 # TODO
 
 * Testing & debugging
-* Upload IDE & Compiler
+* Compile IDE & Compiler with Graal and upload binaries
 
 # In the works
 
