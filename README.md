@@ -16,7 +16,7 @@ Current features:
 * Java / C++ inspired assembly language syntax and comments
 * Inline Groovy support (combine Java / Groovy with assembler)
 * Current plugins include `6502`, `65C02`, `StandardLibrary`, and `VeraLibrary`
-* VERA graphics support (Commander X16)
+* VERA graphics support ([Commander X16](https://www.commanderx16.com/forum/index.php?/home/))
 * Inline Huffman compression / decompression of data binaries (including VERA upload)
 * Simplified branching, and scope delineation, e.g. `bne+ { // more code }`
 * Self-modifying code safe-guards, e.g. `sta mySelfModifyPointer:initialAddress` `inc mySelfModifyPointer`
