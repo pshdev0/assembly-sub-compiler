@@ -1,8 +1,6 @@
 # Assembly Sub-Compiler
 
-This project begun life as a plugin-based 8-bit CPU compiler, with initial support for 6502, quickly followed by a 65(C)02 plugin and VERA (Commander X16) plugin support. The plugin model allows to add new features quickly and easily using a simple Java interface. Later I intend to abstract the addressing modes to allow for compilation on any CPU. Current plugin support provides Java and C++ inspired syntax additions and various helper functions, accompanied by an IDE for easy data management.
-
-The compiler's basic principles:
+This project begun life as a plugin-based 8-bit CPU compiler, with initial support for 6502, quickly followed by a 65(C)02 plugin and VERA (Commander X16) plugin support. The plugin model allows to add new features quickly and easily using a simple Java interface. The compiler's basic principles:
 
 * Each scope `{ }` invokes a new sub-compiler with known (or `null` if appropriate) symbol history.
 * A handlful of flexible regexes identify the next `function()`, `function(x, y, ...)`, command `{ ... }` blocks, `labels:`, and adressing mode styles.
