@@ -2,8 +2,6 @@
 
 This project begun life as a plugin-based 8-bit CPU compiler, with initial support for 6502, quickly followed by a 65(C)02 plugin and VERA (Commander X16) plugin support. The plugin model allows to add new features quickly and easily using a simple Java interface. Later I intend to abstract the addressing modes to allow for compilation on any CPU. Current plugin support provides Java and C++ inspired syntax additions and various helper functions, accompanied by an IDE for easy data management.
 
-THIS WORK IS PROVIDED AS-IS, THE CORE CODE IS THERE AND IT WORKS AS FAR AS I'VE TESTED IT, BUT IT REQUIRES FURTHER TESTING AND THERE ARE PROBABLY A FEW BUGS ! IF YOU FIND ANY BUGS PLEASE LET ME KNOW AND I'LL GET THEM FIXED !
-
 The compiler's basic principles:
 
 * Each scope `{ }` invokes a new sub-compiler with known (or `null` if appropriate) symbol history.
