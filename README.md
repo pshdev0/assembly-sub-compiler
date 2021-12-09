@@ -165,12 +165,12 @@ Once compiled a typical project structure might be:
 
 * Ripple (XRP): `rEb8TK3gBgk5auZkwc6sHnwrGVJH8DuaLh` memo: `100907859`
 * Ripple (BEP20): `0xe578c065e25a69a4c735bee73fd3f4b39f2739b8`
-* Bitcoin: (BTC Network): `15ktY6HdSRiHKzKhYppJpL3SPGFVEmo4d4`
-* Bitcoin: (BEP20): `0xe578c065e25a69a4c735bee73fd3f4b39f2739b8`
-* Ethereum: (ERC20): `0xe578c065e25a69a4c735bee73fd3f4b39f2739b8`
-* Ethereum: (BEP20): `0xe578c065e25a69a4c735bee73fd3f4b39f2739b8`
-* Solana: (Solana): `9yndFSPYG2JE518EzR8u2N6SYUBUzFEuWi1hiSfPi53g`
-* Solana: (BEP20): `0xe578c065e25a69a4c735bee73fd3f4b39f2739b8`
+* Bitcoin (BTC Network): `15ktY6HdSRiHKzKhYppJpL3SPGFVEmo4d4`
+* Bitcoin (BEP20): `0xe578c065e25a69a4c735bee73fd3f4b39f2739b8`
+* Ethereum (ERC20): `0xe578c065e25a69a4c735bee73fd3f4b39f2739b8`
+* Ethereum (BEP20): `0xe578c065e25a69a4c735bee73fd3f4b39f2739b8`
+* Solana (Solana): `9yndFSPYG2JE518EzR8u2N6SYUBUzFEuWi1hiSfPi53g`
+* Solana (BEP20): `0xe578c065e25a69a4c735bee73fd3f4b39f2739b8`
 * USDC (BEP20): `0xe578c065e25a69a4c735bee73fd3f4b39f2739b8`
 * USDC (ERC20): `0xe578c065e25a69a4c735bee73fd3f4b39f2739b8`
 * USDC (Solana): `9yndFSPYG2JE518EzR8u2N6SYUBUzFEuWi1hiSfPi53g`
