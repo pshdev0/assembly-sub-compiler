@@ -23,7 +23,7 @@ Current features:
 Getting started:
 ---
 
-You can create a New project in the IDE or do it manually:
+You can create a New project in the IDE (see PixelCodeX16 project) or do it manually:
 
 * Create a new `ROOT` folder to store your assembly project files.
 * Source assembly `.asm` files should be stored in `ROOT/src/`.
