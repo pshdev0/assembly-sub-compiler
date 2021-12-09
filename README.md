@@ -7,7 +7,7 @@ This project began as a plugin-based 8-bit CPU compiler, with initial support fo
 * Each scope `{ }` invokes a new sub-compiler with known (or `null` if appropriate) symbol history.
 * A handlful of flexible regexes identify the next `function()`, `function(x, y, ...)`, command `{ ... }` blocks, `labels:`, and adressing mode styles.
 * Discovered unknown symbols are tracked in real-time and post-filled as soon as they become defined.
-* Groovy is used to evaluate symbols which allows for inline arithmetic operations and simple inline function evaluation.
+* Groovy is used to evaluate symbols which supports inline arithmetic operations and function evaluation.
 
 Current features:
 ---
