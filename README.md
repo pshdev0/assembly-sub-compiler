@@ -18,7 +18,7 @@ Current features:
 * Inline Huffman compression / decompression of data binaries (including VERA upload)
 * Simplified branching, and scope delineation, e.g. `bne+ { // more code }`
 * Self-modifying code safe-guards, e.g. `sta mySelfModifyPointer:initialAddress` `inc mySelfModifyPointer`
-* Sprite, Tile & Map editing IDE
+* Sprite, Tile & Map editing via the separate PixelCodeX16 IDE
 
 Getting started:
 ---
