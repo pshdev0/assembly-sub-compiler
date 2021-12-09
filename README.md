@@ -145,7 +145,7 @@ Once compiled a typical project structure might be:
 # TODO
 
 * Testing & debugging
-* Compile IDE & Compiler with Graal and upload binaries
+* Compiler with Graal & upload binaries & code
 
 # In the works
 
