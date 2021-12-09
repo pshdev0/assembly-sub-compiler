@@ -158,7 +158,7 @@ Once compiled a typical project structure might be:
 
 # Future
 
-* Abstract addressing modes so it can handle any CPU given the necessary Plugin !
+* Abstract addressing modes so it can handle any CPU given the necessary Plugin. I think this may be possible by having an AddressingMode layer beneath which Plugins connect; a plugin might register a new type of addressing mode e.g. "imm" with the abstraction layer and provide specific code for that. Any existing or standard addressing modes might come from other Plugins, e.g. standard 6502 etc.
 * Rewrite the compiler in C++ and use ChaiScript instead of Groovy
 
 # Support
