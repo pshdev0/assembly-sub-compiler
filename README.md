@@ -144,7 +144,7 @@ Once compiled a typical project structure might be:
 
 # In Progress
 
-* Abstract addressing modes to enable compilation for any processor or library you like.
+* Abstract addressing modes; will enable Plugin support for any CPU or library.
 * Testing & debugging
 
 # TODO List
