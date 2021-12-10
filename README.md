@@ -142,7 +142,7 @@ Once compiled a typical project structure might be:
 }
 ```
 
-# TODO
+# In Progress
 
 * Abstract addressing modes to enable compilation for any processor or library you like.
 * Testing & debugging
