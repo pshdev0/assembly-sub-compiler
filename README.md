@@ -144,12 +144,8 @@ Once compiled a typical project structure might be:
 
 # TODO
 
-* Testing & debugging
-* Compile with Graal & upload binaries & code
-
-# In Progress
-
 * Abstract addressing modes to enable compilation for any processor or library you like.
+* Testing & debugging
 
 # TODO List
 
@@ -158,6 +154,7 @@ Once compiled a typical project structure might be:
 * Auto-save before compiling; this will refresh the `.bin` files before compiling your chosen `.asm` file
 * Groovy sub-compiler support (write assembly code inside Groovy code inside assembly code)
 * Full list of command support docs
+* Compile with Graal & upload binaries & code
 
 # Future
 
