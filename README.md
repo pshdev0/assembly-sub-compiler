@@ -158,7 +158,7 @@ Once compiled a typical project structure might be:
 
 # Future
 
-* Rewrite the compiler in C++ and use ChaiScript instead of Groovy
+* Rewrite the compiler in C++ and use [ChaiScript](https://chaiscript.com/) instead of Groovy
 
 # Support
 
