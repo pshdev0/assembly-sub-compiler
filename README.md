@@ -147,18 +147,20 @@ Once compiled a typical project structure might be:
 * Testing & debugging
 * Compile with Graal & upload binaries & code
 
-# In the works
+# In Progress
 
-* Auto-save before compiling; this will refresh the `.bin` files before compiling your chosen `.asm` file
-* Full list of command support docs
-* Additional language syntax and functions
-* Groovy sub-compiler support (construct assembly code inside your Groovy code inside your `.asm` files, have Groovy invoke the sub-compiler and inject directly into machine code binary - funky)
-* Inline function support (macros)
+* Abstract addressing modes to enable compilation for any processor or library you like.
+
+# TODO List
+
 * Add user-defined plugin support
+* Inline function support (macros)
+* Auto-save before compiling; this will refresh the `.bin` files before compiling your chosen `.asm` file
+* Groovy sub-compiler support (write assembly code inside Groovy code inside assembly code)
+* Full list of command support docs
 
 # Future
 
-* Abstract addressing modes so it can handle any CPU given the necessary Plugin. I think this may be possible by having an AddressingMode layer beneath which Plugins connect; a plugin might register a new type of addressing mode e.g. "imm" with the abstraction layer and provide specific code for that. Any existing or standard addressing modes might come from other Plugins, e.g. standard 6502 etc.
 * Rewrite the compiler in C++ and use ChaiScript instead of Groovy
 
 # Support
