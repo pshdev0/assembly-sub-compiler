@@ -6,8 +6,8 @@ This is a plugin-based CPU compiler, with initial support for 6502, 65(C)02 and 
 
 Compilation is performed in real-time with the following basic principles:
 
-* Each scope `{ }` invokes a new sub-compiler with known (or `null` if appropriate) symbol history.
 * A handlful of flexible regexes identify the next `function()`, `function(x, y, ...)`, command `{ ... }` block, `label:`, or general adressing mode style.
+* Each scope `{ }` invokes a new sub-compiler with known (or `null` if appropriate) symbol history.
 * Discovered unknown symbols are noted and post-filled as soon as they are defined.
 * Groovy is used to evaluate symbols which supports inline arithmetic operations and function evaluation.
 * Abstract addressing modes enable support for any CPU or library.
