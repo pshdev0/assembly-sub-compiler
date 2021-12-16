@@ -2,15 +2,19 @@
 
 🚧 Under Construction 🚧
 
-This project began as a plugin-based 8-bit CPU compiler, with initial support for 6502, quickly followed by a 65(C)02 plugin and VERA (Commander X16) plugin support. The plugin model allows to add new features quickly and easily using a simple Java interface. The compiler's basic principles:
+This is a plugin-based CPU compiler, with initial support for 6502, 65(C)02 and Commander X16 VERA plugin support. Write plugins for any CPU or library you like with bespoke addressing modes via a simple Java interface.
+
+Compilation is performed in real-time with the following basic principles:
 
 * Each scope `{ }` invokes a new sub-compiler with known (or `null` if appropriate) symbol history.
-* A handlful of flexible regexes identify the next `function()`, `function(x, y, ...)`, command `{ ... }` blocks, `labels:`, and adressing mode styles.
-* Discovered unknown symbols are tracked in real-time and post-filled as soon as they become defined.
+* A handlful of flexible regexes identify the next `function()`, `function(x, y, ...)`, command `{ ... }` block, `label:`, or general adressing mode style.
+* Discovered unknown symbols are noted and post-filled as soon as they are defined.
 * Groovy is used to evaluate symbols which supports inline arithmetic operations and function evaluation.
+* Abstract addressing modes enable support for any CPU or library.
 
 Current features:
 ---
+* Write a Plugin for any CPU or library with user-define addressing modes
 * Java / C++ inspired assembly language syntax and comments
 * Inline Groovy support (combine Java / Groovy with assembler)
 * Current plugins include `6502`, `65C02`, `StandardLibrary`, and `VeraLibrary`
@@ -144,12 +148,10 @@ Once compiled a typical project structure might be:
 
 # In Progress
 
-* Abstract addressing modes; will enable Plugin support for any CPU or library.
 * Testing & debugging
 
 # TODO List
 
-* Add user-defined plugin support
 * Inline function support (macros)
 * Auto-save before compiling; this will refresh the `.bin` files before compiling your chosen `.asm` file
 * Groovy sub-compiler support (write assembly code inside Groovy code inside assembly code)
