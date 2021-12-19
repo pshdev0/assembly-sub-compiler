@@ -2,8 +2,26 @@
 
 🚧 Under Construction 🚧
 
-This is a plugin-based CPU compiler, with initial support for 6502, 65(C)02 and Commander X16 VERA plugin support. Write plugins for any CPU or library you like with bespoke addressing modes via a simple Java interface.
+A general purpose plugin CPU compiler.
 
+Current Plugins
+---
+* 6502
+* 65(C)02
+* Commander X16 VERA chip ([Commander X16](https://www.commanderx16.com/forum/index.php?/home/))
+* More planned e.g., 68000, Intel
+
+Current features:
+---
+* Java / C++ inspired assembly language syntax and comments
+* Inline Groovy support (combine Java / Groovy with assembler)
+* Inline Huffman compression / decompression of data binaries (including VERA upload)
+* Simplified branching, and scope delineation, e.g. `bne+ { // more code }`
+* Self-modifying code safe-guards, e.g. `sta mySelfModifyPointer:initialAddress` `inc mySelfModifyPointer`
+* Media support
+
+Under The Bonnet
+---
 Compilation is performed in real-time with the following basic principles:
 
 * A handlful of flexible regexes identify the next `function()`, `function(x, y, ...)`, command `{ ... }` block, `label:`, or general adressing mode style.
@@ -11,18 +29,6 @@ Compilation is performed in real-time with the following basic principles:
 * Discovered unknown symbols are noted and post-filled as soon as they are defined.
 * Groovy is used to evaluate symbols which supports inline arithmetic operations and function evaluation.
 * Abstract addressing modes enable support for any CPU or library.
-
-Current features:
----
-* Write a Plugin for any CPU or library with user-define addressing modes
-* Java / C++ inspired assembly language syntax and comments
-* Inline Groovy support (combine Java / Groovy with assembler)
-* Current plugins include `6502`, `65C02`, `StandardLibrary`, and `VeraLibrary`
-* VERA graphics support ([Commander X16](https://www.commanderx16.com/forum/index.php?/home/))
-* Inline Huffman compression / decompression of data binaries (including VERA upload)
-* Simplified branching, and scope delineation, e.g. `bne+ { // more code }`
-* Self-modifying code safe-guards, e.g. `sta mySelfModifyPointer:initialAddress` `inc mySelfModifyPointer`
-* Sprite, Tile & Map editing via the separate PixelCodeX16 IDE
 
 Getting started:
 ---
@@ -148,7 +154,9 @@ Once compiled a typical project structure might be:
 
 # In Progress
 
+* Integrate user-defined plugin support into the IDE
 * Testing & debugging
+* Upload code
 
 # TODO List
 
@@ -156,7 +164,6 @@ Once compiled a typical project structure might be:
 * Auto-save before compiling; this will refresh the `.bin` files before compiling your chosen `.asm` file
 * Groovy sub-compiler support (write assembly code inside Groovy code inside assembly code)
 * Full list of command support docs
-* Compile with Graal & upload binaries & code
 
 # Future
 
