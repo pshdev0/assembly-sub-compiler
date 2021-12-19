@@ -2,7 +2,7 @@
 
 🚧 Under Construction 🚧
 
-A general purpose plugin CPU compiler.
+A general purpose assembly code compiler, based on user-defined plugins.
 
 Current Plugins
 ---
