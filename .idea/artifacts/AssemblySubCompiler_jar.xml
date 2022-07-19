@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="AssemblySubCompiler:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/AssemblySubCompiler_jar</output-path>
+    <root id="archive" name="AssemblySubCompiler.jar">
+      <element id="module-output" name="AssemblySubCompiler" />
+      <element id="extracted-dir" path="$USER_HOME$/Code/common-jars-mac/groovy-3.0.8.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

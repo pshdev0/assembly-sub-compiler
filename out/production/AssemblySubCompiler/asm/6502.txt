@@ -1,0 +1,73 @@
+// format: MNEMONIC [MODE OPCODE]
+//
+// addressing MODEs are:
+//
+//      i       immediate
+//      zp      zero page
+//      zpx     zero page, x
+//      a       absolute
+//      ax      absolute, x
+//      ay      absolute, y
+//      ix      (indirect, x)
+//      iy      (indirect), y
+//      r       relative
+//      imp     implied
+//      ind     indirect
+//      acc     accumulator
+
+adc i 69 zp 65 zpx 75 a 6d ax 7d ay 79 ix 61 iy 71
+and i 29 zp 25 zpx 35 a 2d ax 3d ay 39 ix 21 iy 31
+asl acc 0a zp 06 zpx 16 a 0e ax 1e
+bcc r 90
+bcs r b0
+beq r f0
+bit zp 24 a 2c
+bmi r 30
+bne r d0
+bpl r 10
+brk imp 00
+bvc r 50
+bvs r 70
+clc imp 18
+cld imp d8
+cli imp 58
+clv imp b8
+cmp i c9 zp c5 zpx d5 a cd ax dd ay d9 ix c1 iy d1
+cpx i e0 zp e4 a ec
+cpy i c0 zp c4 a cc
+dec zp c6 zpx d6 a ce ax de
+dex imp ca
+dey imp 88
+eor i 49 zp 45 zpx 55 a 4d ax 5d ay 59 ix 41 iy 51
+inc zp e6 zpx f6 a ee ax fe
+inx imp e8
+iny imp c8
+jmp a 4c ind 6c
+jsr a 20
+lda i a9 zp a5 zpx b5 a ad ax bd ay b9 ix a1 iy b1
+ldx i a2 zp a6 zpy b6 a ae ay be
+ldy i a0 zp a4 zpx b4 a ac ax bc
+lsr acc 4a zp 46 zpx 56 a 4e ax 5e
+nop imp ea
+ora i 09 zp 05 zpx 15 a 0d ax 1d ay 19 ix 01 iy 11
+pha imp 48
+php imp 08
+pla imp 68
+plp imp 28
+rol acc 2a zp 26 zpx 36 a 2e ax 3e
+ror acc 6a zp 66 zpx 76 a 6e ax 7e
+rti imp 40
+rts imp 60
+sbc i e9 zp e5 zpx f5 a ed ax fd ay f9 ix e1 iy f1
+sec imp 38
+sed imp f8
+sei imp 78
+sta zp 85 zpx 95 a 8d ax 9d ay 99 ix 81 iy 91
+stx zp 86 zpy 96 a 8e
+sty zp 84 zpx 94 a 8c
+tax imp aa
+tay imp a8
+tsx imp ba
+txa imp 8a
+txs imp 9a
+tya imp 98
