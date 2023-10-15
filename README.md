@@ -2,7 +2,7 @@
 
 🚧 Under Construction 🚧
 
-A general purpose assembly code compiler built on user-defined plugins.
+A general purpose assembly code compiler built on user-defined dev.psh0.asmsubcompiler.core.plugins.
 
 Current Plugins
 ---

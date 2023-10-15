@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: com.pshdev.asc.Main
+dev.psh0.asmsubcompiler.Main-Class: main.java.asc.Main
 
