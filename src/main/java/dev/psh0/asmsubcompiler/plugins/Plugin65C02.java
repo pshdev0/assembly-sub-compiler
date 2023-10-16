@@ -10,7 +10,7 @@ public class Plugin65C02 extends Plugin {
 
         /*
 
-            BRAND NEW MNEMONICS
+            BRAND-NEW MNEMONICS
 
             instruction    op code
             & addr mode    (in hex)    description
@@ -43,7 +43,7 @@ public class Plugin65C02 extends Plugin {
                                                                                   |  on WDC only.
             WAI              CB       WAIt.  It's like STP, but any interrupt     |
                                       will make it resume execution.  Especially  |
-                                      useful for superfast interrupt response,    |
+                                      useful for super-fast interrupt response,    |
                                       with zero latency.  See interrupts primer. _⌋
 
          */

@@ -17,6 +17,7 @@ import static dev.psh0.asmsubcompiler.huffman.HCode.*;
 public class PluginStandardLibrary extends Plugin {
 
    public PluginStandardLibrary() {
+
       addAddressingMode("blank_space", "^[\\s\\n]*$", PluginStandardLibrary::blank_space);
       addAddressingMode("function()", "^\\s*(?<command>[a-zA-Z0-9._+-]+)\\(\\s*\\)\\s*$", PluginStandardLibrary::function_no_params);
       addAddressingMode("function(1, 2, ...)", "^\\s*(?<command>[a-zA-Z0-9._+-]+)\\((?<params>.*[^,x])\\)\\s*$", PluginStandardLibrary::function_with_params);
