@@ -160,11 +160,11 @@ Once compiled a typical project structure might be:
 
 # TODO List
 
+* Switch to Java Service Providers for Plugin support
 * Inline function support (macros)
 * Auto-save before compiling; this will refresh the `.bin` files before compiling your chosen `.asm` file
-* Groovy sub-compiler support (write assembly code inside Groovy code inside assembly code)
 * Full list of command support docs
 
-# Future
+# Weird Ideas
 
-* Rewrite the compiler in C++ and use [ChaiScript](https://chaiscript.com/) instead of Groovy
+* Groovy sub-compiler support (write assembly code inside Groovy code inside assembly code)
